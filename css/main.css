@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap");
+
+:root {
+  color: white;
+  font-family: "Oswald", sans-serif;
+}
+
+body {
+  background-image: url("../imgs/stars-bg.png");
+  background-size: cover;
+
+  font-size: 16px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 1rem 5rem;
+}
+
+.navbar img {
+  width: 120px;
+}
+
+.navbar .links {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.links nav {
+  display: inline-block;
+}
+
+.links li {
+  display: inline-block;
+  margin-inline: 1rem;
+}
+
+.links .lang-toggle {
+  display: inline-block;
+  border-radius: 3.5rem;
+  padding: 0.4rem;
+  background-color: white;
+  color: #e9473f;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+}
