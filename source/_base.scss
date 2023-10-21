@@ -1,0 +1,9 @@
+$cubic-transition: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+$breakpoint-mobile: 400px;
+
+@mixin tablet-only {
+  @media (min-width: $breakpoint-mobile) {
+    @content;
+  }
+}

@@ -1,0 +1,68 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 5rem;
+}
+.navbar img {
+  width: 120px;
+  transition: filter 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transition: -webkit-filter 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.navbar img:hover {
+  filter: brightness(3);
+  -webkit-filter: brightness(3);
+}
+.navbar .menu-toggle {
+  min-width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-color: white;
+}
+.navbar .links {
+  display: inline-block;
+  text-transform: uppercase;
+}
+.navbar .links nav {
+  display: inline-block;
+}
+.navbar .links ul {
+  display: flex;
+  gap: 2.5rem;
+}
+.navbar .links .lang-toggle {
+  border-radius: 3.5rem;
+  padding: 0.4rem;
+  background-color: white;
+  color: #e9473f;
+  margin-left: 1rem;
+  transition: background-color 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), color 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.navbar .links .lang-toggle:hover {
+  background-color: #e9473f;
+  color: white;
+}
+.navbar .links a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+.navbar .links li {
+  position: relative;
+  line-height: 2rem;
+}
+.navbar .links li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.navbar .links li:hover::after {
+  width: 100%;
+}
+
+/*# sourceMappingURL=navbar.css.map */

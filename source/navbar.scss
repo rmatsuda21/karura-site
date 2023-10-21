@@ -1,0 +1,86 @@
+@use "base";
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 1rem 5rem;
+
+  img {
+    width: 120px;
+    transition: filter 0.5s base.$cubic-transition;
+    -webkit-transition: -webkit-filter 0.5s base.$cubic-transition;
+  }
+
+  img:hover {
+    filter: brightness(3);
+    -webkit-filter: brightness(3);
+  }
+
+  .menu-toggle {
+    min-width: 40px;
+    height: 40px;
+
+    display: inline-block;
+    background-color: white;
+  }
+
+  .links {
+    display: inline-block;
+    text-transform: uppercase;
+
+    nav {
+      display: inline-block;
+    }
+
+    ul {
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    .lang-toggle {
+      border-radius: 3.5rem;
+      padding: 0.4rem;
+      background-color: white;
+      color: #e9473f;
+      margin-left: 1rem;
+
+      transition: background-color 0.5s base.$cubic-transition,
+        color 0.5s base.$cubic-transition;
+    }
+
+    .lang-toggle:hover {
+      background-color: #e9473f;
+      color: white;
+    }
+
+    a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+    }
+
+    li {
+      position: relative;
+      line-height: 2rem;
+    }
+
+    li::after {
+      content: "";
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: white;
+
+      transition: width 0.5s base.$cubic-transition;
+    }
+
+    li:hover::after {
+      width: 100%;
+    }
+  }
+}
