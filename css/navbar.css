@@ -1,8 +1,13 @@
 .navbar {
   display: flex;
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  padding: 1rem 1rem;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
-  margin: 1rem 5rem;
+  background-color: #1a1a1a;
 }
 .navbar img {
   width: 120px;
@@ -18,18 +23,32 @@
   height: 40px;
   display: inline-block;
   background-color: white;
+  cursor: pointer;
+  z-index: 100;
 }
 .navbar .links {
-  position: sticky;
-  top: 0;
-  display: inline-block;
+  transform: translateY(-400px);
   text-transform: uppercase;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.navbar .links.active {
+  transform: translateY(0px);
+  z-index: 90;
 }
 .navbar .links nav {
-  display: inline-block;
+  display: block;
 }
 .navbar .links ul {
   display: flex;
+  align-items: center;
+  flex-direction: column;
   gap: 2.5rem;
 }
 .navbar .links .lang-toggle {
