@@ -19,12 +19,58 @@
   -webkit-filter: brightness(3);
 }
 .navbar .menu-toggle {
-  min-width: 40px;
-  height: 40px;
+  --size: 30px;
+  --height: 3px;
+  --bg-color: white;
+  position: relative;
+  min-width: var(--size);
+  height: var(--size);
+  border-radius: var(--height);
   display: inline-block;
-  background-color: white;
+  background-color: transparent;
   cursor: pointer;
   z-index: 100;
+}
+.navbar .menu-toggle .mid {
+  position: absolute;
+  width: 100%;
+  height: var(--height);
+  border-radius: var(--height);
+  background-color: var(--bg-color);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.navbar .menu-toggle::after, .navbar .menu-toggle::before {
+  content: "";
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  height: var(--height);
+  border-radius: var(--height);
+  background-color: var(--bg-color);
+  z-index: 100;
+  left: 0;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.navbar .menu-toggle::after {
+  bottom: 0px;
+  transform-origin: center left;
+}
+.navbar .menu-toggle::before {
+  top: 0px;
+  transform-origin: center left;
+}
+.navbar .menu-toggle.active .mid {
+  opacity: 0;
+}
+.navbar .menu-toggle.active::before {
+  transform: rotateZ(45deg);
+  width: 125%;
+}
+.navbar .menu-toggle.active::after {
+  transform: rotateZ(-45deg);
+  width: 125%;
 }
 .navbar .links {
   transform: translateY(-400px);
@@ -84,6 +130,29 @@
 }
 .navbar .links li:hover::after {
   width: 100%;
+}
+@media (min-width: 800px) {
+  .navbar .menu-toggle {
+    display: none;
+  }
+  .navbar .links {
+    position: relative;
+    transform: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+  }
+  .navbar .links nav {
+    display: inline-block;
+  }
+  .navbar .links ul {
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+  .navbar .links .lang-toggle {
+    float: right;
+  }
 }
 
 /*# sourceMappingURL=navbar.css.map */
