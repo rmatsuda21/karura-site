@@ -8,6 +8,11 @@
   font-family: "Oswald", sans-serif;
 }
 
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
   background-color: #f5f5f5;
   font-size: 16px;
@@ -30,27 +35,38 @@ h3 {
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 50px;
 }
 
 h2 {
-  font-size: 40px;
-}
-
-h3 {
   font-size: 30px;
 }
 
+h3 {
+  font-size: 25px;
+}
+
+@media (min-width: 800px) {
+  h1 {
+    font-size: 64px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+}
 /* Intro Card */
 .intro-card {
-  width: 80%;
-  height: 355px;
-  padding: 5rem;
+  width: 90%;
+  padding: 2.5rem;
   box-sizing: border-box;
   background-color: white;
   border-radius: 25px;
   margin: auto;
   display: flex;
+  flex-direction: column;
   gap: 35px;
   align-items: center;
 }
@@ -60,20 +76,39 @@ h3 {
 }
 .intro-card h1 span {
   background: linear-gradient(92deg, #5e72eb -8%, #fd9494 107.93%);
-  font-size: 80px;
+  font-size: 60px;
   text-transform: uppercase;
   background-clip: text;
   color: transparent;
   -webkit-background-clip: text;
 }
 .intro-card p {
-  line-height: 170%;
+  line-height: 130%;
+  text-align: center;
+}
+@media (min-width: 800px) {
+  .intro-card {
+    width: 80%;
+    height: 355px;
+    padding: 5rem;
+    flex-direction: row;
+  }
+  .intro-card h1 span {
+    font-size: 80px;
+  }
+  .intro-card p {
+    text-align: left;
+    line-height: 170%;
+  }
 }
 
 /* Image Carasol */
 .image-carasol {
   display: flex;
   flex-direction: row;
+  gap: 50px;
+  padding: 0 50px;
+  overflow-x: scroll;
 }
 .image-carasol .image-wrapper {
   display: inline-block;
@@ -93,16 +128,16 @@ h3 {
 
 /* Recent News */
 .recent-news {
-  margin-left: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 50px;
 }
 .recent-news .card-carasol {
   position: relative;
   display: flex;
+  flex-direction: column;
   gap: 60px;
 }
 .recent-news .card-carasol .card {
@@ -152,6 +187,15 @@ h3 {
   width: 10px;
   height: 10px;
   background-color: red;
+}
+@media (min-width: 800px) {
+  .recent-news {
+    margin-left: 40%;
+    gap: 80px;
+  }
+  .recent-news .card-carasol {
+    flex-direction: row;
+  }
 }
 
 /* Members */
