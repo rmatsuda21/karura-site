@@ -124,26 +124,20 @@
       gap: 2.5rem;
     }
 
-    .lang-toggle {
-      border-radius: 3.5rem;
-      padding: 0.4rem;
-      background-color: white;
-      color: #e9473f;
-      margin-left: 1rem;
-
-      transition: background-color 0.5s base.$cubic-transition,
-        color 0.5s base.$cubic-transition;
-    }
-
-    .lang-toggle:hover {
-      background-color: #e9473f;
-      color: white;
-    }
-
     a {
       display: inline-block;
       color: white;
       text-decoration: none;
+    }
+
+    a.lang-toggle {
+      padding: 0.4rem;
+      margin-left: 1rem;
+    }
+
+    a.lang-toggle:hover {
+      padding: 0.4rem;
+      color: base.$karura-red;
     }
 
     li {

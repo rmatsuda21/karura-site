@@ -11,24 +11,213 @@
 body {
   background-color: #f5f5f5;
   font-size: 16px;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+p {
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Cartesian;
 }
 
 h1 {
-  font-family: Cartesian;
-  font-size: 5rem;
+  font-size: 64px;
 }
-h1 span {
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+/* Intro Card */
+.intro-card {
+  width: 80%;
+  height: 355px;
+  padding: 5rem;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 25px;
+  margin: auto;
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+.intro-card h1 {
+  text-align: center;
+  float: left;
+}
+.intro-card h1 span {
+  background: linear-gradient(92deg, #5e72eb -8%, #fd9494 107.93%);
+  font-size: 80px;
   text-transform: uppercase;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+.intro-card p {
+  line-height: 170%;
 }
 
-.spacer {
-  height: 300vh;
+/* Image Carasol */
+.image-carasol {
+  display: flex;
+  flex-direction: row;
+}
+.image-carasol .image-wrapper {
+  display: inline-block;
+  min-width: 300px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+.image-carasol .image-wrapper img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  height: 100%;
+  object-fit: cover;
 }
 
+/* Recent News */
+.recent-news {
+  margin-left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.recent-news .card-carasol {
+  position: relative;
+  display: flex;
+  gap: 60px;
+}
+.recent-news .card-carasol .card {
+  display: inline-block;
+  width: 247px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.recent-news .card-carasol .card .img-wrapper {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+.recent-news .card-carasol .card .img-wrapper img {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+}
+.recent-news .card-carasol .card .content {
+  position: relative;
+  margin-top: -20px;
+  z-index: 1;
+  width: 100%;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: white;
+}
+.recent-news .card-carasol .card .content .title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.recent-news .card-carasol .card .content .headline {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+.recent-news .card-carasol .card .content a {
+  font-size: 16px;
+  height: 14px;
+  color: #5e72eb;
+}
+.recent-news .card-carasol .left-arrow,
+.recent-news .card-carasol .right-arrow,
+.recent-news .card-carasol .dots {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+}
+
+/* Members */
+.members {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.members .card-wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  flex-wrap: wrap;
+}
+.members .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.members .card .img-wrapper {
+  width: 243px;
+  height: 243px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.members .card .img-wrapper img {
+  width: 100%;
+  object-fit: cover;
+}
+.members .card .title h3 {
+  margin-bottom: 3px;
+}
+.members .card p {
+  text-align: center;
+  line-height: 150%;
+  width: 200px;
+}
+
+/* Support */
 a.support {
+  z-index: 10;
   position: fixed;
+  padding: 1rem 2rem;
   right: 50px;
   bottom: 50px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+  border: 1px solid #e9473f;
+}
+
+a.special {
+  border-radius: 3.5rem;
+  background-color: #e9473f;
+  color: white;
+  transition: background-color 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), color 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+a.special:hover {
+  background-color: white;
+  color: #e9473f;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -95,22 +95,18 @@
   flex-direction: column;
   gap: 2.5rem;
 }
-.navbar .links .lang-toggle {
-  border-radius: 3.5rem;
-  padding: 0.4rem;
-  background-color: white;
-  color: #e9473f;
-  margin-left: 1rem;
-  transition: background-color 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), color 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-.navbar .links .lang-toggle:hover {
-  background-color: #e9473f;
-  color: white;
-}
 .navbar .links a {
   display: inline-block;
   color: white;
   text-decoration: none;
+}
+.navbar .links a.lang-toggle {
+  padding: 0.4rem;
+  margin-left: 1rem;
+}
+.navbar .links a.lang-toggle:hover {
+  padding: 0.4rem;
+  color: #e9473f;
 }
 .navbar .links li {
   position: relative;

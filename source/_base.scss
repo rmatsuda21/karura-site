@@ -1,3 +1,5 @@
+$karura-red: #e9473f;
+
 $cubic-transition: cubic-bezier(0.215, 0.61, 0.355, 1);
 
 $breakpoint-mobile: 800px;
@@ -5,5 +7,33 @@ $breakpoint-mobile: 800px;
 @mixin tablet-only {
   @media (min-width: $breakpoint-mobile) {
     @content;
+  }
+}
+
+@mixin gradient-text($gradient) {
+  @supports (mix-blend-mode: lighten) {
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      background: unquote($gradient);
+      pointer-events: none;
+    }
+
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+
+    &::before {
+      mix-blend-mode: screen;
+    }
   }
 }
