@@ -140,6 +140,7 @@ section {
 }
 .recent-news .card-carasol {
   --card-width: 247px;
+  --card-height: 315px;
   padding-inline: calc((100vw - var(--card-width)) / 2);
   position: relative;
 }
@@ -245,6 +246,17 @@ section {
   }
   .recent-news .card-carasol {
     flex-direction: row;
+    height: calc(var(--card-height));
+    padding: 0;
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-width: calc(var(--card-width) * 2 + var(--gap));
+    max-width: calc(var(--card-width) * 2 + var(--gap));
+  }
+  .recent-news .card-carasol .card-wrapper {
+    height: calc(var(--card-height));
+    overflow: visible;
   }
 }
 
