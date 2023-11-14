@@ -64,6 +64,10 @@ h3 {
   }
 }
 
+section {
+  margin-block: 2rem;
+}
+
 /* Intro Card */
 
 .intro-card {
@@ -73,12 +77,13 @@ h3 {
 
   background-color: white;
   border-radius: 25px;
-  margin: auto;
+  margin: 2rem auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 35px;
 
-  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
   h1 {
     text-align: center;
@@ -151,23 +156,34 @@ h3 {
 /* Recent News */
 
 .recent-news {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  --gap: 50px;
 
-  gap: 50px;
+  h2 {
+    text-align: center;
+  }
 
   .card-carasol {
+    --card-width: 247px;
+    padding-inline: calc((100vw - var(--card-width)) / 2);
     position: relative;
-    display: flex;
-    flex-direction: column;
 
-    gap: 60px;
+    .card-wrapper {
+      --offset: 0;
+      transform: translateX(
+        calc(var(--offset) * (var(--card-width) * -1 - var(--gap)))
+      );
+      width: fit-content;
+      display: flex;
+
+      gap: var(--gap);
+
+      transition: transform 0.75s base.$cubic-transition;
+    }
 
     .card {
       display: inline-block;
-      width: 247px;
+      min-width: var(--card-width);
+      max-width: var(--card-width);
 
       border-radius: 20px;
       overflow: hidden;
@@ -220,11 +236,58 @@ h3 {
     .right-arrow,
     .dots {
       position: absolute;
+    }
 
-      width: 10px;
-      height: 10px;
+    .left-arrow,
+    .right-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-      background-color: red;
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      top: 50%;
+
+      background-color: white;
+    }
+
+    .left-arrow:hover,
+    .right-arrow:hover {
+      cursor: pointer;
+    }
+
+    .left-arrow {
+      left: 0;
+    }
+
+    .right-arrow {
+      right: 0;
+    }
+
+    .dots {
+      bottom: 0;
+      margin-bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      display: flex;
+      gap: 10px;
+      div {
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      div:hover {
+        cursor: pointer;
+      }
+
+      div.active {
+        background-color: black;
+      }
     }
   }
 

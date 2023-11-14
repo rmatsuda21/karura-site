@@ -57,6 +57,10 @@ h3 {
     font-size: 30px;
   }
 }
+section {
+  margin-block: 2rem;
+}
+
 /* Intro Card */
 .intro-card {
   width: 90%;
@@ -64,11 +68,12 @@ h3 {
   box-sizing: border-box;
   background-color: white;
   border-radius: 25px;
-  margin: auto;
+  margin: 2rem auto;
   display: flex;
   flex-direction: column;
-  gap: 35px;
   align-items: center;
+  gap: 35px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .intro-card h1 {
   text-align: center;
@@ -128,21 +133,28 @@ h3 {
 
 /* Recent News */
 .recent-news {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
+  --gap: 50px;
+}
+.recent-news h2 {
+  text-align: center;
 }
 .recent-news .card-carasol {
+  --card-width: 247px;
+  padding-inline: calc((100vw - var(--card-width)) / 2);
   position: relative;
+}
+.recent-news .card-carasol .card-wrapper {
+  --offset: 0;
+  transform: translateX(calc(var(--offset) * (var(--card-width) * -1 - var(--gap))));
+  width: fit-content;
   display: flex;
-  flex-direction: column;
-  gap: 60px;
+  gap: var(--gap);
+  transition: transform 0.75s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .recent-news .card-carasol .card {
   display: inline-block;
-  width: 247px;
+  min-width: var(--card-width);
+  max-width: var(--card-width);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -184,9 +196,47 @@ h3 {
 .recent-news .card-carasol .right-arrow,
 .recent-news .card-carasol .dots {
   position: absolute;
+}
+.recent-news .card-carasol .left-arrow,
+.recent-news .card-carasol .right-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  top: 50%;
+  background-color: white;
+}
+.recent-news .card-carasol .left-arrow:hover,
+.recent-news .card-carasol .right-arrow:hover {
+  cursor: pointer;
+}
+.recent-news .card-carasol .left-arrow {
+  left: 0;
+}
+.recent-news .card-carasol .right-arrow {
+  right: 0;
+}
+.recent-news .card-carasol .dots {
+  bottom: 0;
+  margin-bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+.recent-news .card-carasol .dots div {
   width: 10px;
   height: 10px;
-  background-color: red;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.recent-news .card-carasol .dots div:hover {
+  cursor: pointer;
+}
+.recent-news .card-carasol .dots div.active {
+  background-color: black;
 }
 @media (min-width: 800px) {
   .recent-news {

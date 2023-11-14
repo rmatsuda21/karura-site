@@ -94,7 +94,8 @@
   }
 
   .links {
-    transform: translateY(-400px);
+    z-index: 100;
+    transform: translateY(-100%);
     text-transform: uppercase;
 
     box-sizing: border-box;
@@ -104,12 +105,12 @@
     left: 0;
     padding: 1rem 1rem;
 
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.9);
 
     transition: transform 0.5s base.$cubic-transition;
 
     &.active {
-      transform: translateY(0px);
+      transform: translateX(0px);
       z-index: 90;
     }
 
@@ -133,6 +134,8 @@
     a.lang-toggle {
       padding: 0.4rem;
       margin-left: 1rem;
+
+      float: right;
     }
 
     a.lang-toggle:hover {
