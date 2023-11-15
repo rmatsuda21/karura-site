@@ -10,11 +10,13 @@
       src="https://kit.fontawesome.com/d0ae13bd34.js"
       crossorigin="anonymous"
     ></script>
+    <script src="/js/modal.js"></script>
     <script src="/js/navbar.js" defer></script>
     <script src="/js/news.js" defer></script>
     <title>Karura Project</title>
   </head>
   <body>
+    <div id="modal" class="modal hidden"></div>
     <div class="navbar">
       <a class="logo" href=""><img alt="Karura Logo" src="/imgs/logo.png" /></a>
       <div id="menu-toggle" class="menu-toggle"><div class="mid"></div></div>
@@ -74,62 +76,18 @@
     <section class="recent-news">
       <h2>Recent News</h2>
       <div class="card-carasol">
-        <div id="carasolWrapper" class="card-wrapper">
-          <div class="card">
-            <div class="img-wrapper">
-              <img width="150" src="imgs/stars-bg.png" />
-            </div>
-            <div class="content">
-              <p class="title">Article Name</p>
-              <p class="headline">Headline</p>
-              <a>Read more</a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="img-wrapper">
-              <img width="150" src="imgs/stars-bg.png" />
-            </div>
-            <div class="content">
-              <p class="title">Article Name</p>
-              <p class="headline">Headline</p>
-              <a>Read more</a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="img-wrapper">
-              <img width="150" src="imgs/stars-bg.png" />
-            </div>
-            <div class="content">
-              <p class="title">Article Name</p>
-              <p class="headline">Headline</p>
-              <a>Read more</a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="img-wrapper">
-              <img width="150" src="imgs/stars-bg.png" />
-            </div>
-            <div class="content">
-              <p class="title">Article Name</p>
-              <p class="headline">Headline</p>
-              <a>Read more</a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="img-wrapper">
-              <img width="150" src="imgs/stars-bg.png" />
-            </div>
-            <div class="content">
-              <p class="title">Article Name</p>
-              <p class="headline">Headline</p>
-              <a>Read more</a>
-            </div>
+        <div class="carasol-viewport">
+          <div id="carasolWrapper" class="card-wrapper">
+            <h3>No News!</h>
           </div>
         </div>
-        <i id="leftArrow" class="fa-solid fa-lg fa-chevron-left left-arrow"></i>
+        <i
+          id="leftArrow"
+          class="fa-solid fa-lg fa-chevron-left left-arrow hide"
+        ></i>
         <i
           id="rightArrow"
-          class="fa-solid fa-lg fa-chevron-right right-arrow"
+          class="fa-solid fa-lg fa-chevron-right right-arrow hide"
         ></i>
         <div id="dots" class="dots"></div>
       </div>
