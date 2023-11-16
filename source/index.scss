@@ -65,19 +65,20 @@ h3 {
 }
 
 section {
-  margin-block: 2rem;
+  margin: 200px 2rem;
 }
 
 /* Intro Card */
 
 .intro-card {
   width: 80%;
+  max-width: 1130px;
   padding: 60px;
   box-sizing: border-box;
 
   background-color: white;
   border-radius: 25px;
-  margin: 2rem auto;
+  margin: 132px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -353,7 +354,8 @@ section {
 
   gap: 100px;
 
-  .top-row, .bottom-row {
+  .top-row,
+  .bottom-row {
     width: 80%;
 
     display: flex;
@@ -371,6 +373,8 @@ section {
     gap: 25px;
 
     .img-wrapper {
+      box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+
       width: 243px;
       height: 243px;
       border-radius: 50%;
@@ -395,7 +399,8 @@ section {
   }
 
   @include base.desktop-tablet-only {
-    .top-row, .bottom-row {
+    .top-row,
+    .bottom-row {
       flex-direction: row;
     }
   }
@@ -405,46 +410,123 @@ section {
 
 .departments {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
   gap: 50px;
 
+  .card-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 50px;
+  }
+
   .card {
     position: relative;
-    background-color: red;
-    width: 250px;
-    aspect-ratio: 5/7;
+    background-color: white;
+    width: 285px;
+    height: 407px;
 
-    border-radius: 15px;
+    border-radius: 20px;
 
     overflow: hidden;
 
+    transition: background-color 0.3s base.$cubic-transition;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
     img {
       position: absolute;
-      top: 5%;
+      bottom: 0;
       right: 0;
-      height: 70%;
+      height: 90%;
 
-      transition: height .2s base.$cubic-transition;
+      margin-bottom: -15%;
+      margin-right: -15%;
+
+      transition: transform 0.2s base.$cubic-transition;
     }
 
     span {
       position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
+      top: 30px;
+      left: 30px;
 
-      color: white;
-      font-size: 50px;
+      color: black;
+      font-size: 40px;
+
+      transition: color 0.3s base.$cubic-transition;
+      text-transform: uppercase;
     }
+  }
+
+  .card.business {
+    --business-color: #ff9190;
+
+    span {
+      color: var(--business-color);
+    }
+
+    img {
+      height: 100%;
+      margin-right: -50%;
+      margin-bottom: -35%;
+    }
+  }
+
+  .card.business:hover {
+    span {
+      color: white;
+    }
+
+    background-color: var(--business-color);
+  }
+
+  .card.science {
+    --science-color: #5e72eb;
+
+    span {
+      color: var(--science-color);
+    }
+  }
+
+  .card.science:hover {
+    span {
+      color: white;
+    }
+
+    background-color: var(--science-color);
+  }
+
+  .card.engineering {
+    --engineering-color: #fdc094;
+
+    span {
+      color: var(--engineering-color);
+    }
+
+    img {
+      height: 65%;
+      margin-right: -15%;
+      margin-bottom: 25%;
+    }
+  }
+  .card.engineering:hover {
+    span {
+      color: white;
+    }
+
+    background-color: var(--engineering-color);
   }
 
   .card:hover {
     cursor: pointer;
 
     img {
-      height: 100%;
+      transform: scale(1.35);
     }
   }
 }
@@ -461,7 +543,7 @@ section {
   width: 100%;
 
   img {
-    width: 250px
+    width: 250px;
   }
 }
 
