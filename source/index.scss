@@ -68,6 +68,28 @@ section {
   margin: 200px 2rem;
 }
 
+/* BG Images */
+.earth {
+  display: none;
+
+  @include base.desktop-tablet-only {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    margin-right: -100px;
+    margin-top: -100px;
+    width: 550px;
+    height: 550px;
+
+    z-index: -1;
+
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+
 /* Intro Card */
 
 .intro-card {
@@ -91,13 +113,36 @@ section {
     float: left;
 
     span {
-      background: linear-gradient(92deg, #5e72eb -8%, #fd9494 107.93%);
+      background: linear-gradient(
+        92deg,
+        #5e72eb -8%,
+        #fd9494 25%,
+        #5e72eb 65%,
+        #fd9494 100%
+      );
+
+      background-size: 400% 400%;
+      background-repeat: no-repeat;
+
+      animation: gradient 15s base.$cubic-transition alternate infinite;
 
       font-size: 60px;
       text-transform: uppercase;
       background-clip: text;
       color: transparent;
       -webkit-background-clip: text;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 0%;
+      }
+      50% {
+        background-position: 100% 100%;
+      }
+      100% {
+        background-position: 0% 0%;
+      }
     }
   }
 
@@ -161,6 +206,11 @@ section {
 .recent-news {
   --gap: 50px;
 
+  .mars {
+    position: absolute;
+    display: none;
+  }
+
   h2 {
     text-align: center;
     margin-bottom: 100px;
@@ -169,7 +219,7 @@ section {
   .card-carasol {
     --card-width: 247px;
     --card-height: 315px;
-    padding-inline: calc((100vw - var(--card-width)) / 2);
+    padding-inline: calc((100vw - var(--card-width)) / 2 - 2rem);
     position: relative;
 
     .card-wrapper {
@@ -316,6 +366,23 @@ section {
   @include base.desktop-tablet-only {
     margin-left: 40%;
     gap: 80px;
+
+    .mars {
+      filter: brightness(0.9);
+      transform: rotate(16.987deg);
+      display: inline-block;
+      left: 0;
+
+      margin-top: -100px;
+      margin-left: -100px;
+      width: 670px;
+      height: 670px;
+
+      border-radius: 50%;
+
+      box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+    }
+
     .card-carasol {
       flex-direction: row;
       height: calc(var(--card-height));
@@ -420,10 +487,17 @@ section {
   .card-wrapper {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     gap: 50px;
+  }
+
+  @include base.desktop-tablet-only {
+    .card-wrapper {
+      flex-direction: row;
+    }
   }
 
   .card {
