@@ -13,6 +13,7 @@
     <script src="/js/modal.js"></script>
     <script src="/js/navbar.js" defer></script>
     <script src="/js/news.js" defer></script>
+    <script src="/js/support.js" defer></script>
     <title>Karura Project</title>
   </head>
   <body>
@@ -78,7 +79,7 @@
       <div class="card-carasol">
         <div class="carasol-viewport">
           <div id="carasolWrapper" class="card-wrapper">
-            <h3>No News!</h>
+            <h3>No News!</h3>
           </div>
         </div>
         <i
@@ -96,7 +97,7 @@
     <section class="members">
       <h2>Members</h2>
 
-      <div class="card-wrapper">
+      <div class="top-row">
         <div class="card">
           <div class="img-wrapper">
             <img src="imgs/profiles/profile_haruto.jpg" />
@@ -113,7 +114,38 @@
         </div>
         <div class="card">
           <div class="img-wrapper">
-            <img src="imgs/profiles/profile_haruto.jpg" />
+            <img src="imgs/profiles/profile_hirokuni.jpg" />
+          </div>
+
+          <div class="title">
+            <h3>Haruto Seto</h3>
+            <span>Japan Team leader</span>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur. Vitae duis elementum
+            ullamcorper sit. Ut risus aliquet eget in ac non elit nec.
+          </p>
+        </div>
+      </div>
+      <div class="bottom-row">
+        <div class="card">
+          <div class="img-wrapper">
+            <img src="imgs/profiles/profile_ben.png" />
+          </div>
+
+          <div class="title">
+            <h3>Haruto Seto</h3>
+            <span>Japan Team leader</span>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur. Vitae duis elementum
+            ullamcorper sit. Ut risus aliquet eget in ac non elit nec.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="img-wrapper">
+            <img src="imgs/profiles/profile_taiko.jpg" />
           </div>
 
           <div class="title">
@@ -127,35 +159,7 @@
         </div>
         <div class="card">
           <div class="img-wrapper">
-            <img src="imgs/profiles/profile_haruto.jpg" />
-          </div>
-
-          <div class="title">
-            <h3>Haruto Seto</h3>
-            <span>Japan Team leader</span>
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Vitae duis elementum
-            ullamcorper sit. Ut risus aliquet eget in ac non elit nec.
-          </p>
-        </div>
-        <div class="card">
-          <div class="img-wrapper">
-            <img src="imgs/profiles/profile_haruto.jpg" />
-          </div>
-
-          <div class="title">
-            <h3>Haruto Seto</h3>
-            <span>Japan Team leader</span>
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Vitae duis elementum
-            ullamcorper sit. Ut risus aliquet eget in ac non elit nec.
-          </p>
-        </div>
-        <div class="card">
-          <div class="img-wrapper">
-            <img src="imgs/profiles/profile_haruto.jpg" />
+            <img src="imgs/profiles/profile_takafumi.png" />
           </div>
 
           <div class="title">
@@ -171,12 +175,18 @@
     </section>
 
     <section class="departments">
-      <div class="card">Business</div>
-      <div class="card">Science</div>
-      <div class="card">Engineering</div>
+      <div class="card">
+        <img src="imgs/departments/business.png" /><span>Business</span>
+      </div>
+      <div class="card">
+        <img src="imgs/departments/science.png" /><span>Science</span>
+      </div>
+      <div class="card">
+        <img src="imgs/departments/engineering.png" /><span>Engineering</span>
+      </div>
     </section>
 
-    <h2>Coming soon</h2>
+    <h2 style="text-align: center">Coming soon</h2>
 
     <section class="sponsors">
       <img src="imgs/sponsors/space_media.png" />
@@ -185,6 +195,6 @@
       <img src="imgs/sponsors/uchubanashi.png" />
     </section>
 
-    <a class="support special">Support us!</a>
+    <a id="supportBtn" class="support special">Support us!</a>
   </body>
 </html>

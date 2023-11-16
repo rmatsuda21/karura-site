@@ -71,8 +71,8 @@ section {
 /* Intro Card */
 
 .intro-card {
-  width: 90%;
-  padding: 2.5rem;
+  width: 80%;
+  padding: 60px;
   box-sizing: border-box;
 
   background-color: white;
@@ -111,6 +111,8 @@ section {
     padding: 5rem;
 
     flex-direction: row;
+
+    gap: 60px;
 
     h1 {
       span {
@@ -351,13 +353,13 @@ section {
 
   gap: 100px;
 
-  .card-wrapper {
+  .top-row, .bottom-row {
     width: 80%;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 90px;
-    flex-wrap: wrap;
   }
 
   .card {
@@ -391,9 +393,80 @@ section {
       width: 200px;
     }
   }
+
+  @include base.desktop-tablet-only {
+    .top-row, .bottom-row {
+      flex-direction: row;
+    }
+  }
+}
+
+/* Departments */
+
+.departments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 50px;
+
+  .card {
+    position: relative;
+    background-color: red;
+    width: 250px;
+    aspect-ratio: 5/7;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 5%;
+      right: 0;
+      height: 70%;
+
+      transition: height .2s base.$cubic-transition;
+    }
+
+    span {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      color: white;
+      font-size: 50px;
+    }
+  }
+
+  .card:hover {
+    cursor: pointer;
+
+    img {
+      height: 100%;
+    }
+  }
+}
+
+/* Sponsors */
+
+.sponsors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 70px;
+
+  width: 100%;
+
+  img {
+    width: 250px
+  }
 }
 
 /* Modal */
+
 .modal {
   z-index: 10000;
   position: fixed;
