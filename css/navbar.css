@@ -1,12 +1,12 @@
 .navbar {
   display: flex;
   box-sizing: border-box;
-  padding: 1rem 30px;
+  padding: 1rem 30px 50px 30px;
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  background: url("/imgs/nav-bg.svg#svgView(preserveAspectRatio(none))") no-repeat;
-  background-size: 100% 100%;
+  background: url("/imgs/svg/nav-bg.svg#svgView(preserveAspectRatio(none))") no-repeat;
+  background-size: 200% 100%;
 }
 .navbar img {
   width: 120px;
@@ -130,7 +130,8 @@
 }
 @media (min-width: 800px) {
   .navbar {
-    padding: 1rem 160px 2rem 160px;
+    padding: 1rem 160px 100px 160px;
+    background-size: 100% 100%;
   }
   .navbar .menu-toggle {
     display: none;

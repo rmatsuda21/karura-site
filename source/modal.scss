@@ -25,7 +25,93 @@
 }
 
 .modal {
+  .business,
+  .science,
+  .engineering {
+    position: relative;
+    width: 900px;
+    aspect-ratio: 931 / 693;
+
+    padding: 90px;
+    box-sizing: border-box;
+
+    border-radius: 20px;
+
+    color: white;
+
+    & > * {
+      font-family: "Oswald", sans-serif;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 100;
+      text-transform: uppercase;
+      font-size: 150px;
+      line-height: 130px;
+
+      margin-bottom: 40px;
+
+      text-align: right;
+    }
+
+    img {
+      height: 50%;
+
+      position: absolute;
+      z-index: 90;
+
+      left: 0;
+      bottom: 20%;
+    }
+
+    p {
+      position: relative;
+      z-index: 100;
+      font-size: 16px;
+      line-height: 160%;
+      margin-bottom: 20px;
+
+      width: 60%;
+      margin-left: auto;
+    }
+  }
+
   .business {
-    background-color: white;
+    background: url("/imgs/svg/business-bg.svg#svgView(preserveAspectRatio(none))")
+      no-repeat;
+
+    img {
+      height: 55%;
+    }
+  }
+
+  .engineering {
+    background: url("/imgs/svg/engineering-bg.svg#svgView(preserveAspectRatio(none))")
+      no-repeat;
+
+    h1 {
+      z-index: 70;
+      text-align: center;
+    }
+
+    img {
+      height: 60%;
+
+      left: 10px;
+      bottom: 12%;
+    }
+  }
+
+  .science {
+    background: url("/imgs/svg/science-bg.svg#svgView(preserveAspectRatio(none))")
+      no-repeat;
+
+    img {
+      height: 70%;
+
+      left: 50px;
+      bottom: 10%;
+    }
   }
 }

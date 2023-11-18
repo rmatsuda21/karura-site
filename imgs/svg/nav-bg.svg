@@ -1,0 +1,23 @@
+<svg id="visual" viewBox="0 0 1900 530" width="1900" height="530" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+  <defs>
+    <linearGradient id="Gradient1">
+      <stop offset="0%" stop-color="#3338a4" />
+      <stop offset="43.71%" stop-color="#5e72eb" />
+      <stop offset="81.58%" stop-color="#ff9190" />
+    </linearGradient>
+    <linearGradient id="Gradient2">
+      <stop offset="0%" stop-color="#5e72ea" />
+      <stop offset="43.71%" stop-color="#ff9190" />
+      <stop offset="81.58%" stop-color="#fdc094" />
+    </linearGradient>
+    <filter id='shadow' color-interpolation-filters="sRGB">
+      <feDropShadow dx="5" dy="9" stdDeviation="15" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="transparent"></rect>
+  <path d="M0 390C400 700 800 240 1300 240C1400 240 1600 230 1900 490L1900 0L0 0Z" fill="url(#Gradient2)"
+    stroke-linecap="round" stroke-linejoin="miter"></path>
+  <path d="M0 260C400 700 700 240 1400 210C1500 215 1600 200 1900 380L1900 0L0 0Z" fill="url(#Gradient1)"
+    stroke-linecap="round" stroke-linejoin="miter" filter="url(#shadow)"></path>
+</svg>

@@ -1,0 +1,41 @@
+<svg width="931" height="693" viewBox="0 0 931 693" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g filter="url(#bgBlur)">
+    <g filter="url(#blur1)">
+      <ellipse cx="146.575" cy="162.946" rx="303.597" fill="#FF9190" />
+    </g>
+    <g filter="url(#blur1)">
+      <circle cx="218.755" cy="520.538" r="368.755" fill="#E990FF" />
+    </g>
+    <g filter="url(#blur1)">
+      <ellipse cx="432.684" cy="110.667" rx="242.196" ry="259.542" fill="#90C3FF" />
+    </g>
+    <g filter="url(#blur1)">
+      <circle cx="935.707" cy="420.319" r="204.293" fill="#94DEFD" />
+    </g>
+    <g filter="url(#blur1)">
+      <circle cx="758.396" cy="632.321" r="271.106" fill="#FF90E0" />
+    </g>
+    <g filter="url(#blur1)">
+      <circle cx="807.221" cy="55.4183" r="319.93" fill="#FF9190" />
+    </g>
+    <g filter="url(#blur1)">
+      <circle cx="666.529" cy="243.65" r="179.238" fill="#FF90D9" />
+    </g>
+    <g filter="url(#blur1)">
+      <circle cx="268.222" cy="639.387" r="179.238" fill="#90EBFF" />
+    </g>
+  </g>
+  <defs>
+    <filter id="bgBlur" x="-357.03" y="-464.512" width="1697.03" height="1567.94" filterUnits="userSpaceOnUse"
+      color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="1" result="bg" />
+      <feBlend mode="normal" in="SourceGraphic" in2="bg" result="shape" />
+      <feGaussianBlur stdDeviation="100" />
+    </filter>
+    <filter id="blur1" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="bg" />
+      <feBlend mode="normal" in="SourceGraphic" in2="bg" result="shape" />
+      <feGaussianBlur stdDeviation="2" />
+    </filter>
+  </defs>
+</svg>
