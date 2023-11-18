@@ -5,7 +5,8 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(91deg, rgb(18, 12, 110) 14.38%, #5e72eb 43.71%, #ff9190 81.58%);
+  background: url("/imgs/nav-bg.svg#svgView(preserveAspectRatio(none))") no-repeat;
+  background-size: 100% 100%;
 }
 .navbar img {
   width: 120px;
@@ -129,7 +130,7 @@
 }
 @media (min-width: 800px) {
   .navbar {
-    padding: 1rem 160px;
+    padding: 1rem 160px 2rem 160px;
   }
   .navbar .menu-toggle {
     display: none;
