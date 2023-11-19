@@ -621,6 +621,7 @@ section {
     width: 250px;
   }
 }
+
 /* Support */
 
 a.support {
@@ -649,4 +650,16 @@ a.special {
 a.special:hover {
   background-color: white;
   color: base.$karura-red;
+}
+
+/* Footer */
+footer {
+  background: url("/imgs/svg/footer-bg.svg#svgView(preserveAspectRatio(none))")
+    no-repeat;
+  background-size: 100% 100%;
+
+  padding: 150px 1rem 1rem 25px;
+  min-height: 1.5rem;
+
+  color: white;
 }
