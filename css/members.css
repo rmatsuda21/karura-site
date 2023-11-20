@@ -1,0 +1,65 @@
+.members {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.members .top-row,
+.members .bottom-row {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 90px;
+}
+.members .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.members .card .img-wrapper {
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  width: 243px;
+  height: 243px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.members .card .img-wrapper img {
+  width: 100%;
+  object-fit: cover;
+}
+.members .card .title span {
+  display: block;
+  margin-bottom: 5px;
+}
+.members .card .title h3 {
+  margin-bottom: 3px;
+}
+.members .card .body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.members .card .body span:first-child {
+  font-weight: 600;
+}
+.members .card p {
+  text-align: center;
+  line-height: 150%;
+  width: 200px;
+}
+@media (min-width: 800px) {
+  .members .top-row,
+  .members .bottom-row {
+    flex-direction: row;
+  }
+}
+
+/*# sourceMappingURL=members.css.map */

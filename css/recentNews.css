@@ -1,0 +1,176 @@
+.recent-news {
+  --gap: 50px;
+}
+.recent-news .mars {
+  position: absolute;
+  display: none;
+}
+.recent-news h2 {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.recent-news .card-carasol {
+  --card-width: 247px;
+  --card-height: 315px;
+  padding-inline: calc((100vw - var(--card-width)) / 2 - 2rem);
+  position: relative;
+}
+.recent-news .card-carasol .card-wrapper {
+  min-width: 100%;
+  --offset: 0;
+  transform: translateX(calc(var(--offset) * (var(--card-width) * -1 - var(--gap))));
+  width: fit-content;
+  display: flex;
+  gap: var(--gap);
+  transition: transform 0.75s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.recent-news .card-carasol .card-wrapper h3 {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+.recent-news .card-carasol .card {
+  display: inline-block;
+  min-width: var(--card-width);
+  max-width: var(--card-width);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.recent-news .card-carasol .card .img-wrapper {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+.recent-news .card-carasol .card .img-wrapper img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.recent-news .card-carasol .card .content {
+  position: relative;
+  margin-top: -20px;
+  z-index: 1;
+  width: 100%;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: white;
+}
+.recent-news .card-carasol .card .content .title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.recent-news .card-carasol .card .content .headline {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+.recent-news .card-carasol .card .content a {
+  font-size: 16px;
+  height: 14px;
+  color: #5e72eb;
+}
+.recent-news .card-carasol .left-arrow,
+.recent-news .card-carasol .right-arrow,
+.recent-news .card-carasol .dots {
+  position: absolute;
+}
+.recent-news .card-carasol .left-arrow,
+.recent-news .card-carasol .right-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  top: 35%;
+  opacity: 1;
+  background-color: white;
+  transition: opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1), border 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.recent-news .card-carasol .left-arrow.hide,
+.recent-news .card-carasol .right-arrow.hide {
+  pointer-events: none;
+  opacity: 0;
+}
+.recent-news .card-carasol .left-arrow:hover,
+.recent-news .card-carasol .right-arrow:hover {
+  cursor: pointer;
+}
+.recent-news .card-carasol .left-arrow {
+  left: 0;
+}
+.recent-news .card-carasol .right-arrow {
+  right: 0;
+}
+.recent-news .card-carasol .dots {
+  bottom: 0;
+  margin-bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+.recent-news .card-carasol .dots div {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.recent-news .card-carasol .dots div:hover {
+  cursor: pointer;
+}
+.recent-news .card-carasol .dots div.active {
+  background-color: black;
+}
+@media (min-width: 800px) {
+  .recent-news {
+    margin-left: 40%;
+    gap: 80px;
+  }
+  .recent-news .mars {
+    filter: brightness(0.9);
+    transform: rotate(16.987deg);
+    display: inline-block;
+    left: 0;
+    margin-top: -100px;
+    margin-left: -100px;
+    width: 670px;
+    height: 670px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+  .recent-news .card-carasol {
+    flex-direction: row;
+    height: calc(var(--card-height));
+    padding: 0;
+    margin: auto;
+    min-width: calc(var(--card-width) * 2 + var(--gap));
+    max-width: calc(var(--card-width) * 2 + var(--gap));
+  }
+  .recent-news .card-carasol .carasol-viewport {
+    min-width: calc(var(--card-width) * 2 + var(--gap));
+    max-width: calc(var(--card-width) * 2 + var(--gap));
+    overflow: hidden;
+  }
+  .recent-news .card-carasol .card-wrapper {
+    height: calc(var(--card-height));
+  }
+  .recent-news .card-carasol .left-arrow,
+  .recent-news .card-carasol .right-arrow {
+    border: 2px solid white;
+  }
+  .recent-news .card-carasol .left-arrow {
+    margin-left: -25px;
+  }
+  .recent-news .card-carasol .right-arrow {
+    margin-right: -25px;
+  }
+  .recent-news .card-carasol .left-arrow:hover,
+  .recent-news .card-carasol .right-arrow:hover {
+    border: 2px solid #aaa;
+  }
+}
+
+/*# sourceMappingURL=recentNews.css.map */

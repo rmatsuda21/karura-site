@@ -1,0 +1,82 @@
+@use "base";
+
+.members {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 100px;
+
+  .top-row,
+  .bottom-row {
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 90px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+
+    .img-wrapper {
+      box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+
+      width: 243px;
+      height: 243px;
+      border-radius: 50%;
+
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .title {
+      span {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      h3 {
+        margin-bottom: 3px;
+      }
+    }
+
+    .body {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+
+      span:first-child {
+        font-weight: 600;
+      }
+    }
+
+    p {
+      text-align: center;
+      line-height: 150%;
+      width: 200px;
+    }
+  }
+
+  @include base.desktop-tablet-only {
+    .top-row,
+    .bottom-row {
+      flex-direction: row;
+    }
+  }
+}

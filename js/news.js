@@ -116,9 +116,19 @@ const offsetCarasol = (e, _offset) => {
   toggleArrows();
 };
 
-left.addEventListener("click", (e) => offsetCarasol(e, -1), false);
-right.addEventListener("click", (e) => offsetCarasol(e, 1), false);
-left.addEventListener("touchstart", (e) => offsetCarasol(e, -1), false);
-right.addEventListener("touchstart", (e) => offsetCarasol(e, 1), false);
+const handleLeftClick = (e) => {
+  e.preventDefault();
+  offsetCarasol(e, -1);
+};
+
+const handleRightClick = (e) => {
+  e.preventDefault();
+  offsetCarasol(e, 1);
+};
+
+left.addEventListener("click", handleLeftClick, false);
+right.addEventListener("click", handleRightClick, false);
+left.addEventListener("touchstart", handleLeftClick, false);
+right.addEventListener("touchstart", handleRightClick, false);
 
 fetchNews();
