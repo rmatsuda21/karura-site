@@ -246,6 +246,9 @@ footer {
   footer .socials span {
     margin-right: 1rem;
   }
+  footer .socials a {
+    color: white;
+  }
   footer .socials i {
     font-size: 18px;
     transition: color 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
