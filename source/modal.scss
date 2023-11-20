@@ -115,3 +115,12 @@
     }
   }
 }
+
+@include base.desktop-tablet-only {
+  .modal {
+    .business,
+    .science,
+    .engineering {
+    }
+  }
+}
