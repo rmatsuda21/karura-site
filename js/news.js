@@ -6,6 +6,19 @@ const carasol = document.getElementById("carasolWrapper");
 
 let offset = 0;
 
+const newsModal = (title, headline, text, src) => {
+  return `
+    <div class="news">
+      <div style="background: url(${src});" ></div>
+      <div>
+        <p>${title}</p>
+        <p>${headline}</p>
+        <p>${text}</p>
+      </div>
+    </div>
+  `;
+};
+
 const toggleArrows = () => {
   if (offset === 0) {
     left.classList.add("hide");
@@ -42,7 +55,7 @@ const createCard = (title, headline, text, src) => {
   const readMore = document.createElement("a");
   readMore.innerText = "Read more";
   readMore.addEventListener("click", () =>
-    showModal("<div><h1>Test!</h1></div>")
+    showModal(newsModal(title, headline, text, src))
   );
 
   content.appendChild(titleEl);
