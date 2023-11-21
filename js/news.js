@@ -7,12 +7,19 @@ const carasol = document.getElementById("carasolWrapper");
 let offset = 0;
 
 const newsModal = (title, headline, text, src) => {
+  const style = `
+    background-image:    url(${src});
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center;
+  `;
+
   return `
     <div class="news">
-      <div style="background: url(${src});" ></div>
-      <div>
-        <p>${title}</p>
-        <p>${headline}</p>
+      <div class="img" style="${style}" ></div>
+      <div class="body">
+        <h1>${title}</h1>
+        <h2>${headline}</h2>
         <p>${text}</p>
       </div>
     </div>
