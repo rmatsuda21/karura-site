@@ -159,7 +159,7 @@
   }
   .recent-news .card-carasol .left-arrow,
   .recent-news .card-carasol .right-arrow {
-    border: 2px solid white;
+    transition: box-shadow 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   .recent-news .card-carasol .left-arrow {
     margin-left: -25px;
@@ -169,7 +169,7 @@
   }
   .recent-news .card-carasol .left-arrow:hover,
   .recent-news .card-carasol .right-arrow:hover {
-    border: 2px solid #aaa;
+    box-shadow: rgba(50, 50, 93, 0.35) 0px 13px 27px -5px, rgba(0, 0, 0, 0.4) 0px 8px 16px -8px;
   }
 }
 

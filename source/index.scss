@@ -217,34 +217,44 @@ section {
   }
 }
 
-/* Sponsors */
+/* Go Back */
+.up-arrow {
+  position: absolute;
 
-.sponsors {
-  display: flex;
+  right: 40px;
+
+  display: flex !important;
   justify-content: center;
   align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  filter: drop-shadow(3px 6px 4px rgba(0, 0, 0, 0.25));
+}
 
-  gap: 70px;
+.up-arrow:hover {
+  cursor: pointer;
+}
 
-  width: 100%;
-
-  img {
-    width: 250px;
-  }
-
-  .dark-bg {
-    background-color: #ddd;
+@include base.desktop-tablet-only {
+  .up-arrow {
+    right: 100px;
   }
 }
 
 /* Support */
 
 a.support {
+  cursor: pointer;
   z-index: 10;
   position: fixed;
   padding: 1rem 2rem;
-  right: 50px;
-  bottom: 50px;
+  right: 20px;
+  bottom: 20px;
+
+  text-decoration: none;
 
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box; /* Firefox, other Gecko */
@@ -253,10 +263,19 @@ a.support {
   border: 1px solid base.$karura-red;
 }
 
+@include base.desktop-tablet-only {
+  a.support {
+    right: 50px;
+    bottom: 50px;
+  }
+}
+
 a.special {
   border-radius: 3.5rem;
   background-color: base.$karura-red;
   color: white;
+
+  text-decoration: none;
 
   transition: background-color 0.5s base.$cubic-transition,
     color 0.5s base.$cubic-transition;
@@ -273,10 +292,31 @@ footer {
     no-repeat;
   background-size: 150% 100%;
 
-  padding: 150px 4rem 1rem 4rem;
+  padding: 150px 2rem 1rem 2rem;
   min-height: 1.5rem;
 
   color: white;
+
+  a {
+    color: white;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .socials {
+    span {
+      margin-right: 2rem;
+    }
+
+    i {
+      font-size: 18px;
+      margin-right: 1rem;
+    }
+  }
 
   @include base.desktop-tablet-only {
     display: flex;
@@ -303,12 +343,7 @@ footer {
         margin-right: 1rem;
       }
 
-      a {
-        color: white;
-      }
-
       i {
-        font-size: 18px;
         transition: color 0.5s base.$cubic-transition;
         margin-right: 0.5rem;
       }

@@ -3,7 +3,9 @@ window.onload = () => {
   modal.addEventListener("click", hideModal);
 };
 
-const hideModal = () => {
+const hideModal = (e) => {
+  if (e.target.id !== "modal") return;
+
   const modal = document.getElementById("modal");
   modal.classList.add("hidden");
 };

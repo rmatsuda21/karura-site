@@ -1,0 +1,62 @@
+@use "base";
+
+.sponsors {
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+
+  h1 {
+    text-align: center;
+    margin: 50px auto;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 70px;
+  }
+
+  img {
+    width: 220px;
+  }
+
+  @include base.desktop-tablet-only {
+    margin-bottom: 80px;
+
+    img {
+      filter: grayscale(100%);
+      transition: filter 0.5s base.$cubic-transition;
+    }
+    img:hover {
+      filter: grayscale(0%);
+      cursor: pointer;
+    }
+
+    h1 {
+      font-size: 55px;
+    }
+
+    h1:first-of-type {
+      text-align: left;
+    }
+
+    h1:nth-child(3) {
+      text-align: right;
+    }
+
+    .row {
+      justify-content: space-between;
+    }
+  }
+
+  .dark-bg {
+    background-color: #ddd;
+  }
+
+  .navy-bg {
+    background-color: #002654;
+  }
+}
