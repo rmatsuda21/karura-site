@@ -8,6 +8,11 @@
     display: none;
   }
 
+  .space {
+    position: absolute;
+    display: none;
+  }
+
   h2 {
     text-align: center;
     margin-bottom: 100px;
@@ -167,7 +172,7 @@
 
     .mars {
       filter: brightness(0.9);
-      transform: rotate(16.987deg);
+      transform: rotate(17deg);
       display: inline-block;
       left: 0;
 
@@ -176,12 +181,29 @@
       width: 670px;
       height: 670px;
 
+      z-index: 1;
+
       border-radius: 50%;
 
       box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
     }
 
+    .space {
+      left: 0;
+      margin-left: -60px;
+      display: inline-block;
+
+      width: 700px;
+
+      transform: rotate(18deg);
+
+      embed svg defs #bg {
+        width: 100%;
+      }
+    }
+
     .card-carasol {
+      z-index: 2;
       flex-direction: row;
       height: calc(var(--card-height));
       padding: 0;

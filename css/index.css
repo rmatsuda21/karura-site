@@ -33,6 +33,7 @@ h1,
 h2,
 h3 {
   font-family: Cartesian;
+  z-index: 3;
 }
 
 h1 {
