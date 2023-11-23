@@ -135,7 +135,7 @@
   row-gap: 20px;
 }
 .modal .support .info span:nth-child(2n) {
-  text-align: right;
+  text-align: left;
 }
 .modal .support .info strong {
   font-weight: 700;
