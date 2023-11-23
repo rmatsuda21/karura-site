@@ -2,9 +2,9 @@
   xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
   <defs>
     <pattern id="bg" viewBox="0 0 307 395" width="100%" height="100%">
-      <image href="../stars-bg.png" x="-80%" y="-20%" width="80%" transform="scale(-1, 1)">
-        <animate attributeName="x" values="-60%;-70%;-50%;" dur="160s" repeatCount="indefinite" />
-        <animate attributeName="y" values="-40%;-20%;-40%;" dur="120s" repeatCount="indefinite" />
+      <image href="../stars-bg.png" x="-80%" y="-20%" width="100%" transform="scale(-1, 1)">
+        <animate attributeName="x" values="-90%;-80%;-90%;" dur="160s" repeatCount="indefinite" />
+        <animate attributeName="y" values="-40%;-10%;-40%;" dur="100s" repeatCount="indefinite" />
       </image>
     </pattern>
 
