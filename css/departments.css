@@ -13,9 +13,20 @@
   align-items: center;
   gap: 50px;
 }
+.departments embed {
+  position: absolute;
+  display: none;
+}
 @media (min-width: 800px) {
   .departments .card-wrapper {
     flex-direction: row;
+  }
+  .departments embed {
+    right: -450px;
+    width: 65%;
+    max-width: 1200px;
+    min-width: 800px;
+    display: inline-block;
   }
 }
 .departments .card {
