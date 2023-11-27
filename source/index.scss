@@ -158,13 +158,13 @@ section {
   }
 
   p {
-    font-weight: 100;
+    font-weight: 400;
     line-height: 130%;
     text-align: center;
   }
 
   p:first-of-type {
-    font-weight: 500;
+    font-weight: 600;
   }
 
   @include base.desktop-tablet-only {
@@ -262,6 +262,8 @@ a.support {
   box-sizing: border-box; /* Opera/IE 8+ */
 
   border: 1px solid base.$karura-red;
+
+  font-family: 'Oswald', sans-serif;
 }
 
 @include base.desktop-tablet-only {
@@ -297,6 +299,8 @@ footer {
   min-height: 1.5rem;
 
   color: white;
+
+  font-family: 'Oswald', sans-serif;
 
   a {
     color: white;
