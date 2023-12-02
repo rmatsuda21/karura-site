@@ -203,6 +203,20 @@ section {
   .up-arrow {
     right: 100px;
   }
+  .up-arrow:hover {
+    animation: bounce 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
 }
 /* Support */
 a.support {

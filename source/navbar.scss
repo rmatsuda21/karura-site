@@ -135,11 +135,23 @@
       margin-left: 1rem;
 
       float: right;
+
+      text-align: center;
+      width: 3.5rem;
+
+      &::before {
+        transition: content 0.2s base.$cubic-transition;
+        content: "EN / JP";
+      }
     }
 
     a.lang-toggle:hover {
       padding: 0.4rem;
       color: base.$karura-red;
+
+      &::before {
+        content: "JP";
+      }
     }
 
     li {

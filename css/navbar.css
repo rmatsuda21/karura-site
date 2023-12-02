@@ -107,10 +107,19 @@
   padding: 0.4rem;
   margin-left: 1rem;
   float: right;
+  text-align: center;
+  width: 3.5rem;
+}
+.navbar .links a.lang-toggle::before {
+  transition: content 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  content: "EN / JP";
 }
 .navbar .links a.lang-toggle:hover {
   padding: 0.4rem;
   color: #e9473f;
+}
+.navbar .links a.lang-toggle:hover::before {
+  content: "JP";
 }
 .navbar .links li {
   position: relative;

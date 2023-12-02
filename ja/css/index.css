@@ -3,3 +3,7 @@
 :root {
   font-family: "Zen Kaku Gothic New", sans-serif;
 }
+
+.navbar .links a.lang-toggle:hover::before {
+  content: "EN";
+}

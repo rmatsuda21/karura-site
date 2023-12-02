@@ -243,6 +243,23 @@ section {
   .up-arrow {
     right: 100px;
   }
+
+  .up-arrow:hover {
+    animation: bounce 0.5s base.$cubic-transition;
+  }
+
+  // small bounce animation
+  @keyframes bounce {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
 }
 
 /* Support */
@@ -263,7 +280,7 @@ a.support {
 
   border: 1px solid base.$karura-red;
 
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 @include base.desktop-tablet-only {
@@ -300,7 +317,7 @@ footer {
 
   color: white;
 
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 
   a {
     color: white;
