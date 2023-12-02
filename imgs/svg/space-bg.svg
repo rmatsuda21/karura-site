@@ -2,7 +2,7 @@
   xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
   <defs>
     <pattern id="bg" viewBox="0 0 307 395" width="100%" height="100%">
-      <image href="../stars-bg.png" x="0%" y="-15%" width="100%">
+      <image href="../stars-bg.webp" x="0%" y="-15%" width="100%">
         <animate attributeName="y" values="-40%;20%;-40%;" dur="140s" repeatCount="indefinite" />
       </image>
     </pattern>
