@@ -24,8 +24,10 @@
     <script src="/ja/js/department.js" defer></script>
     <script src="/js/upArrow.js" defer></script>
     <script defer>
-      fetchNews(
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vSKKvs2psqclsDD4ENKp3QZ4Zpwv6R8xFX_PWoJfN0IRcgGOCsGFNuT_Vhy_Cx8j9iHC4D_-1-nIWBu/pub?gid=0&single=true&output=csv"
+      addEventListener("load", () =>
+        fetchNews(
+          "https://docs.google.com/spreadsheets/d/e/2PACX-1vSKKvs2psqclsDD4ENKp3QZ4Zpwv6R8xFX_PWoJfN0IRcgGOCsGFNuT_Vhy_Cx8j9iHC4D_-1-nIWBu/pub?gid=0&single=true&output=csv"
+        )
       );
     </script>
     <title>Karura Project Official Website</title>
