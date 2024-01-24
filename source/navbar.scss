@@ -17,13 +17,6 @@
 
   img {
     width: 120px;
-    transition: filter 0.5s base.$cubic-transition;
-    -webkit-transition: -webkit-filter 0.5s base.$cubic-transition;
-  }
-
-  img:hover {
-    filter: brightness(3);
-    -webkit-filter: brightness(3);
   }
 
   .menu-toggle {

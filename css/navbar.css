@@ -11,12 +11,6 @@
 }
 .navbar img {
   width: 120px;
-  transition: filter 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-  -webkit-transition: -webkit-filter 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-.navbar img:hover {
-  filter: brightness(3);
-  -webkit-filter: brightness(3);
 }
 .navbar .menu-toggle {
   --size: 30px;
