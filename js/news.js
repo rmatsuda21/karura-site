@@ -14,13 +14,17 @@ const newsModal = (title, headline, text, src) => {
     background-position: center center;
   `;
 
+  const pStyle = `
+    white-space: pre-wrap;
+  `;
+
   return `
     <div class="news">
       <div class="img" style="${style}" ></div>
       <div class="body">
         <h1>${title}</h1>
         <h2>${headline}</h2>
-        <p>${text}</p>
+        <p style="${pStyle}">${text}</p>
       </div>
     </div>
   `;

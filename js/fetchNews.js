@@ -20,6 +20,7 @@ const createCard = (title, headline, text, src) => {
 
   const readMore = document.createElement("a");
   readMore.innerText = "Read more";
+
   readMore.addEventListener("click", () =>
     showModal(newsModal(title, headline, text, src))
   );
@@ -42,16 +43,40 @@ const fetchNews = (url) => {
   fetch(url)
     .then((res) => res.text())
     .then((v) => {
-      const rawRows = v.split("\n");
+      console.log(v);
+      const rawRows = v.split("\r").map((row) => row.trim());
+      // console.log(JSON.parse(v));
+      console.log(rawRows);
       const maxCount = parseInt(rawRows[0].split(",").slice(-1));
 
       if (rawRows.length < 1) return;
 
-      const data = rawRows.slice(1).map((row) => row.split(","));
+      const result = [];
+
+      for (const row of rawRows.slice(1)) {
+        let columns = [];
+        let current = "";
+        let withinQuotes = false;
+
+        for (let char of row) {
+          if (char === "," && !withinQuotes) {
+            columns.push(current.trim());
+            current = "";
+          } else if (char === '"') {
+            withinQuotes = !withinQuotes;
+          } else {
+            current += char;
+          }
+        }
+
+        columns.push(current.trim());
+        result.push(columns);
+      }
+      console.log(result);
       clearCards();
 
       for (let i = 0; i < maxCount; i++) {
-        row = data[i];
+        row = result[i];
         carasol.appendChild(createCard(row[0], row[1], row[2], row[3]));
       }
 
