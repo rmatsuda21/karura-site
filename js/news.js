@@ -24,6 +24,7 @@ const newsModal = (title, headline, text, src) => {
       <div class="body">
         <h1>${title}</h1>
         <h2>${headline}</h2>
+        <hr />
         <p style="${pStyle}">${text}</p>
       </div>
     </div>

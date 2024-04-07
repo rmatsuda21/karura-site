@@ -65,11 +65,12 @@
   background-color: white;
 }
 .recent-news .card-carasol .card .content .title {
-  font-size: 24px;
+  font-size: 16px;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 .recent-news .card-carasol .card .content .headline {
-  font-size: 20px;
+  font-size: 14px;
   margin-bottom: 25px;
 }
 .recent-news .card-carasol .card .content a {
