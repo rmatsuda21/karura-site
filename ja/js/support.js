@@ -13,7 +13,7 @@ supportBtn.addEventListener("click", () => {
         <span><strong>口座名義</strong>KARURA</span>
         <span><strong>科目</strong>普通</span>
       </div>
-      <a href="https://readyfor.jp/projects/karura2024" class="special">支援はこちらから</a>
+      <a href="https://camp-fire.jp/projects/view/753892" class="special">支援はこちらから</a>
     </div>`
   );
 });
