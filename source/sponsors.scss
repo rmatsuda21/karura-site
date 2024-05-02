@@ -27,6 +27,15 @@
     align-items: center;
 
     gap: 20px;
+    max-width: 100vw;
+  }
+
+  .group > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
   }
 
   img {
@@ -41,12 +50,20 @@
     width: 230px;
   }
 
+  .bronze {
+    width: 200px;
+  }
+
   .item {
     width: 150px;
+  }
 
-    &:first-of-type {
-      margin-right: 20px;
-    }
+  .hal {
+    width: 100px;
+  }
+
+  .dark-bg {
+    background-color: #ddd;
   }
 
   @include base.desktop-tablet-only {
@@ -55,12 +72,10 @@
     grid-template-columns: 1fr 1fr;
 
     img {
-      filter: grayscale(100%);
       transition: filter 0.5s base.$cubic-transition;
     }
 
     img:hover {
-      filter: grayscale(0%);
       cursor: pointer;
     }
 
